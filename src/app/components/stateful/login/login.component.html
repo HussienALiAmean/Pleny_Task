@@ -1,0 +1,12 @@
+<div class="form-container">
+  <form class="login-form" (submit)="onSubmit()">
+    <img src="./../../../../assets/Logomark.jpg" >
+      <h1>Log in to your account</h1>
+      <p>Welcome back! Please enter your details.</p>
+      <label for="email">Email</label>
+      <input type="email" [(ngModel)]="email" id="email" name="email" placeholder="Enter your email" required>
+      <label for="password">Password</label>
+      <input type="password" [(ngModel)]="password" id="password" name="password" placeholder="Enter your password" required>
+      <button type="submit">Sign in</button>
+  </form>
+</div>

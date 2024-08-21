@@ -1,0 +1,92 @@
+ /* General Reset */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full viewport height for centering the form */
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for centering the form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Form styling */
+.login-form {
+  background-color: #fff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a lifted effect */
+  width: 100%;
+  max-width: 400px; /* Max width for the form */
+  text-align: center; /* Center the text */
+  font-weight: 500;
+}
+
+.login-form img {
+  width: 100px; /* Adjust image size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.login-form h1 {
+  margin-bottom: 10px; /* Space below the heading */
+  font-size: 2rem; /* Font size for the heading */
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+
+}
+
+.login-form p {
+  margin-bottom: 20px; /* Space below the paragraph */
+  color: #666; /* Gray color for the text */
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px; /* Space below the label */
+  text-align: left; /* Align label text to the left */
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+
+}
+
+.login-form input {
+  width: 100%; /* Full width of the container */
+  padding: 10px;
+  margin-bottom: 20px; /* Space below the input */
+  border-radius: 4px;
+  border: 1px solid #ccc; /* Border color for inputs */
+  font-size: 1rem;
+}
+
+.login-form button {
+  width: 100%; /* Full width of the container */
+  padding: 10px;
+  background-color: #007bff; /* Blue background for the button */
+  color:  #ccc; /* White text */
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+}
+
+.login-form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

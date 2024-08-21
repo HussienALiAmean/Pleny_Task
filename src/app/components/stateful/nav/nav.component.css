@@ -1,0 +1,108 @@
+       /* General Reset */
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 0px 32px;
+        height: 80px;
+        font-family: "Inter";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+    }
+    .navbar-part a {
+        color: #667085;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 1rem;
+    }
+
+    .navbar-part a:hover {
+        text-decoration: underline;
+    }
+
+    .navbar-part {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-part.left .brand {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    .navbar-part.left img { 
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar-part.right  {
+        color: rgb(5, 5, 5);
+        font-size: 1.5rem;
+        text-decoration: none;
+        margin-right: 30px;
+    }
+
+      /* Search input styling with icon */
+      .search-container {
+        position: relative;
+    }
+
+    .search-input {
+        padding: 7px 15px 7px 35px; /* Padding to make room for the icon */
+        border-radius: 10px; /* Rounded corners */
+        border: none;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .search-input::placeholder {
+        color: #999;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: 1rem;
+    }
+
+    /* Cart icon with counter */
+    .cart-container {
+        position: relative;
+        margin-left: 20px;
+    }
+
+    .cart-icon {
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .cart-counter {
+        position: absolute;
+        top: -15px;
+        left: 18px;
+        background-color: rgb(0, 81, 255);
+        color: white;
+        border-radius: 50%;
+        padding: .2px 6px;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    .cart-icon:hover {
+        cursor: pointer;
+    }

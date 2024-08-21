@@ -1,0 +1,39 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for vertical sections */
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navigation component */
+.nav {
+    color: white;
+    padding: 10px;
+}
+
+/* Router component */
+.router {
+    background-color: #f4f4f4;
+    padding: 10px;
+    flex: 1; /* Takes up remaining space between nav and main-content */
+}
+
+
+
+/* Footer component */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
