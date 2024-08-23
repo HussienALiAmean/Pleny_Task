@@ -1,0 +1,14 @@
+    <div class="category-list">
+        <h3>products</h3>
+        <ul>
+
+            <li>
+                <input type="radio" id="All" name="category" value="All" [checked]="selectedCategory=='All'" (change)="changeProductList($event);" >
+                <label for="All">All Categories</label>
+            </li>
+            <li *ngFor="let cat of Categoris">
+                <input type="radio" [id]="cat" name="category" [value]="cat"  (change)="changeProductList($event);">
+                <label [for]="cat">{{cat}}</label>
+            </li>
+        </ul>
+    </div>

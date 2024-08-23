@@ -1,0 +1,25 @@
+  <nav class="navbar">
+  <div class="navbar-part left">
+       <img src="./../../../../assets/Logomark.jpg" >
+       <a class="brand" routerLinkActive =" active" outerLink ="/Home">My Brand</a>
+       <a routerLinkActive =" active" outerLink ="/Home" >Home</a>
+  </div>
+   <div class="navbar-part right">
+      <ng-container *ngIf="isAuthenticated; then thenTemplate; else elseTemplate"></ng-container>
+      <ng-template #thenTemplate>
+        <div  class="search-container">
+          <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="searchKey" >
+          <i class="search-icon fa-solid fa-magnifying-glass" (click)="Search()"></i>
+        </div>
+        <div  class="cart-container">
+          <i class="fa fa-solid fa-cart-shopping"></i>
+          <span class="cart-counter">{{cartItems}}</span> 
+        </div>
+        <a *ngIf="isAuthenticated" routerLinkActive ="active" outerLink ="/Account">Account</a>
+      </ng-template>
+      <ng-template #elseTemplate>
+        <a  routerLinkActive ="active"  routerLink ="/Login">Login</a> 
+      </ng-template>
+  </div>
+ </nav>
+ <hr>

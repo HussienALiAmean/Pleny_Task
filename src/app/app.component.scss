@@ -1,0 +1,45 @@
+// Variables
+$background-color-nav: #333;
+$background-color-router: #f4f4f4;
+$color-white: white;
+$padding: 10px;
+$height-full: 100%;
+
+// General Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Container for vertical sections
+body, html {
+  height: $height-full;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+// Navigation component
+.nav {
+  color: $color-white;
+  padding: $padding;
+  background-color: $background-color-nav;
+}
+
+// Router component
+.router {
+  background-color: $background-color-router;
+  padding: $padding;
+  flex: 1; // Takes up remaining space between nav and main-content
+}
+
+// Footer component
+.footer {
+  background-color: $background-color-nav;
+  color: $color-white;
+  padding: $padding;
+}

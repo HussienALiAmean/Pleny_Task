@@ -1,0 +1,64 @@
+<div class="content">
+    <div class="header-content">
+      <app-router-header ></app-router-header>
+    </div>
+    <div class="main-content">
+     <div class="left">
+         <app-filteration></app-filteration>
+      </div>
+      <div class="right">
+        <div class="product-grid">
+           
+            <div class="product-card" *ngFor="let product of (Products$|async)">
+                <div>  
+                    <div class="image-container">
+                        <img [src]="product.images[0]" alt="Product Image">
+                        <span class="discount-label">-{{product.discountPercentage}}% </span>
+                    </div>
+                    <div class="pd-up">
+                        <h2 class="product-name">{{product.title}}</h2>
+                        <p class="product-description">{{product.description}}</p>
+                    </div>    
+                </div>
+                <div class="pd-under">
+                    <div class="price">
+                        <span class="price-before"><strong>{{product.price}}</strong> USD</span>
+                        <span class="price-after"><strong>{{product.price-(product.discountPercentage/100*product.price)| number: '1.2-2'}}</strong> USD </span>
+                    </div>
+                    <p class="brand">Brand: <strong>{{product.brand}}</strong></p>
+                    <p class="category">Category: <strong>{{product.category}}</strong></p>
+                    <p class="in-stock">In stock: <strong>{{product.stock}}</strong></p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="rating-value">{{product.rating}}</span>
+                        <p>({{product.reviews.length}})</p>
+                    </div>
+                    <button class="add-to-cart" (click)="addToCart(product.id)" >ADD TO CART</button>
+                </div>
+               
+            </div>
+       
+        </div>
+
+        <div class="pagination" >
+            <a  class="prev" (click)="selectPage(currentPage - 1)" [class.disabled]="currentPage === 1">&laquo;</a>
+        
+            <a  (click)="selectPage(1)" [class.active]="currentPage === 1">1</a>
+            
+            <a *ngIf="shouldShowLeftEllipsis()" class="ellipsis">...</a>
+            
+            <ng-container *ngFor="let page of visiblePages" >
+                <a  [class.active]="page === currentPage" (click)="selectPage(page)">{{ page }}</a>
+            </ng-container>
+            
+            <a *ngIf="shouldShowRightEllipsis()" class="ellipsis">...</a>
+
+            <a  (click)="selectPage(totalPages)" *ngIf="totalPages!=1" [class.active]="currentPage === totalPages">{{ totalPages }}</a>
+        
+            <a  class="next" (click)="selectPage(currentPage + 1)" [class.disabled]="currentPage === totalPages">&raquo;</a>
+        </div>
+        
+
+      </div>
+    </div>
+ </div>
