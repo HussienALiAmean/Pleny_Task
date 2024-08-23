@@ -1,0 +1,135 @@
+// Variables for common values
+$font-family: "Inter";
+$font-size-base: 16px;
+$font-weight-medium: 500;
+$line-height-base: 24px;
+$text-color-base: #667085;
+$text-color-dark: rgb(5, 5, 5);
+$background-color: #ffffff;
+$border-color: rgb(112, 112, 112);
+$brand-font-size: 1.5rem;
+$link-margin: 20px;
+$cart-icon-color: white;
+$cart-counter-bg: rgb(0, 81, 255);
+$cart-counter-color: white;
+$cart-counter-font-size: 0.8rem;
+$cart-counter-font-weight: bold;
+$padding-base: 10px;
+
+// General Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Navbar Styling
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+  padding: 0px 32px;
+  height: 80px;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-base;
+  text-align: left;
+
+  .navbar-part {
+    display: flex;
+    align-items: center;
+
+    a {
+      color: $text-color-base;
+      text-decoration: none;
+      margin-left: $link-margin;
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.left {
+      .brand {
+        color: $text-color-dark;
+        font-size: $brand-font-size;
+        text-decoration: none;
+        margin-right: $link-margin;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &.right {
+      color: $text-color-dark;
+      font-size: $brand-font-size;
+      text-decoration: none;
+      margin-right: 30px;
+    }
+  }
+}
+
+// Search input styling with icon
+.search-container {
+  position: relative;
+  border-radius: 20px;
+  background-color: red;
+
+  .search-input {
+    padding: $padding-base 15px $padding-base 35px;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    font-size: 1.1rem;
+    width: 100%;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1rem;
+
+    &:hover {
+      color: #2c2b2b;
+    }
+  }
+}
+
+// Cart icon with counter
+.cart-container {
+  position: relative;
+  margin-left: $link-margin;
+
+  .cart-icon {
+    font-size: 1.5rem;
+    color: $cart-icon-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .cart-counter {
+    position: absolute;
+    top: -15px;
+    left: 18px;
+    background-color: $cart-counter-bg;
+    color: $cart-counter-color;
+    border-radius: 50%;
+    padding: 0.2px 6px;
+    font-size: $cart-counter-font-size;
+    font-weight: $cart-counter-font-weight;
+  }
+}

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/stateless/home/home.component';
 import { LoginComponent } from './components/stateful/login/login.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ProductService } from 'src/services/Product/product.service';
@@ -22,7 +21,6 @@ import { Productreducer } from 'src/Store/Product/product.reducer';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     NavComponent,
     NotFoundComponent,

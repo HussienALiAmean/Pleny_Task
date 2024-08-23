@@ -1,0 +1,103 @@
+// Variables for common values
+$font-stack: Arial, sans-serif;
+$background-color: #f4f4f4;
+$form-bg-color: #fff;
+$border-color: #ccc;
+$button-bg-color: #007bff;
+$button-hover-color: #0056b3;
+$text-color: #666;
+$heading-color: #333;
+$border-radius: 8px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$full-width: 100%;
+$padding: 20px;
+$font-size-base: 1rem;
+$font-size-small: 14px;
+$font-size-large: 2rem;
+
+// General Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: $font-stack;
+}
+
+// Container for centering the form
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+// Form styling
+.login-form {
+  background-color: $form-bg-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  width: $full-width;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 500;
+
+  img {
+    width: 100px;
+    height: auto;
+    margin-bottom: $padding / 2;
+  }
+
+  h1 {
+    margin-bottom: $padding / 2;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    color: $heading-color;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: $padding / 2;
+    color: $text-color;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: $font-size-small;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  input {
+    width: $full-width;
+    padding: 10px;
+    margin-bottom: $padding / 2;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+    font-size: $font-size-base;
+  }
+
+  button {
+    width: $full-width;
+    padding: 10px;
+    background-color: $button-bg-color;
+    color: $form-bg-color;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background-color: $button-hover-color;
+    }
+  }
+}

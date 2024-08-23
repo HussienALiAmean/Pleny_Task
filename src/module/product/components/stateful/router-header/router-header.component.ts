@@ -6,7 +6,7 @@ import { IProductState } from 'src/Store/Product/product.state';
 @Component({
   selector: 'app-router-header',
   templateUrl: './router-header.component.html',
-  styleUrls: ['./router-header.component.css']
+  styleUrls: ['./router-header.component.scss']
 })
 export class RouterHeaderComponent implements OnInit {
 

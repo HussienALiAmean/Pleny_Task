@@ -1,0 +1,47 @@
+// Variables
+$background-color: #f0f0f0;
+$text-color: #333;
+$accent-color: #007bff;
+$font-family: Arial, sans-serif;
+$h1-size: 8rem;
+$message-size: 2rem;
+$description-size: 1.2rem;
+
+// Not Found Page Styling
+
+
+.not-found-container {
+  text-align: center;
+  color: $text-color;
+  height: 60vh;
+
+  h1 {
+    font-size: $h1-size;
+    margin-bottom: 20px;
+  }
+
+  .message {
+    font-size: $message-size;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: $description-size;
+    margin-bottom: 20px;
+  }
+
+  .home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $accent-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}

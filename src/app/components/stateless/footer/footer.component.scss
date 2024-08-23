@@ -1,0 +1,51 @@
+// Variables
+$padding: 48px;
+$background-color: #333;
+$text-color: white;
+$font-family: Arial, sans-serif;
+$footer-logo-width: 32px;
+$footer-text-size: 1.2rem;
+$footer-right-size: 16px;
+$footer-right-color: #98A2B3;
+$footer-right-line-height: 24px;
+
+// General Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Footer Styling
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+
+  &-left {
+    display: flex;
+    align-items: center;
+
+    .footer-logo {
+      width: $footer-logo-width;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .footer-text {
+      font-size: $footer-text-size;
+    }
+  }
+
+  &-right {
+    font-size: $footer-right-size;
+    font-weight: 400;
+    line-height: $footer-right-line-height;
+    text-align: right;
+    color: $footer-right-color;
+  }
+}

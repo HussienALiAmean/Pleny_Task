@@ -8,7 +8,7 @@ import { getproducts, getproductsCategory } from 'src/Store/Product/product.sele
 @Component({
   selector: 'app-filteration',
   templateUrl: './filteration.component.html',
-  styleUrls: ['./filteration.component.css']
+  styleUrls: ['./filteration.component.scss']
 })
 export class FilterationComponent implements OnInit {
  
