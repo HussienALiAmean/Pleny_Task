@@ -9,7 +9,8 @@ export class ApiService<T> {
   
     private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) 
+    {  }
 
   get(url: string): Observable<T[]> {
     return this.http.get<T[]>(url, { headers: this.headers });

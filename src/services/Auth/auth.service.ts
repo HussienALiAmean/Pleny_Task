@@ -86,6 +86,10 @@ export class AuthService {
   getToken() {
     return localStorage.getItem("token");
   }
+  
+  getUserId():string|null{
+    return localStorage.getItem("id");
+  }
 
   setUserData(authUser: IAuthUser) {
     localStorage.setItem("id", authUser.id.toString());

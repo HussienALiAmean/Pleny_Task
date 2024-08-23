@@ -1,4 +1,6 @@
 export const environment = {
-  production: true,
-   apiUrl:'https://dummyjson.com'
+  production: false,
+  apiUrl: 'https://dummyjson.com',
+  expiresInMins:30,
+  limiteOFItemPerPage:5
 };

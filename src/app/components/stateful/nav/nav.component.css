@@ -52,19 +52,26 @@
         font-size: 1.5rem;
         text-decoration: none;
         margin-right: 30px;
+
     }
 
       /* Search input styling with icon */
       .search-container {
         position: relative;
+        border-radius: 20PX;
+        background-color: red;
     }
 
     .search-input {
-        padding: 7px 15px 7px 35px; /* Padding to make room for the icon */
+        padding: 10px 15px 10px 35px; /* Padding to make room for the icon */
         border-radius: 10px; /* Rounded corners */
         border: none;
-        font-size: 1rem;
+        font-size: 1.1rem;
         width: 100%;
+        border: 1px solid rgb(112, 112, 112);
+
+
+
     }
 
     .search-input::placeholder {
@@ -78,6 +85,9 @@
         transform: translateY(-50%);
         color: #999;
         font-size: 1rem;
+    }
+    .search-icon:hover{
+        color: #2c2b2b;
     }
 
     /* Cart icon with counter */

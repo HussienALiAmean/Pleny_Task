@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'https://dummyjson.com',
-  expiresInMins:30
+  expiresInMins:30,
+  limiteOFItemPerPage:13
 };
 
 /*http://localhost:5062/

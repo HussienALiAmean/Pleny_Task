@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RouterComponent } from './router.component';
+import { RouterHeaderComponent } from './router-header.component';
 
-describe('RouterComponent', () => {
-  let component: RouterComponent;
-  let fixture: ComponentFixture<RouterComponent>;
+describe('RouterHeaderComponent', () => {
+  let component: RouterHeaderComponent;
+  let fixture: ComponentFixture<RouterHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RouterComponent ]
+      declarations: [ RouterHeaderComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RouterComponent);
+    fixture = TestBed.createComponent(RouterHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

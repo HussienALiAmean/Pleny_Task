@@ -1,10 +1,21 @@
-.main-content {
+.content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10PX;
     width: 96%;
     margin: auto;
     /* Fixed height, adjust as needed */
+}
+
+.header-content{
+  width: 100%;
+  padding: 0px 25px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+
 }
 
 .left {
@@ -23,43 +34,61 @@
     gap: 1%;
     justify-content: center;
     padding: 10px 0px;
+    box-sizing:border-box ;
+    font-family: Open Sans;
+
+
 }
 
 .product-card {
-    background-color: #fff;
+    margin:5px 0px;
+    background-color: #f3f2f200;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 100%;
     max-width: 300px;
-    box-sizing: border-box;
+    box-sizing:border-box ;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     /* flex: 1 1 calc(33.333% - 20px); 3 cards per row */
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    height: 40vh; /* Using viewport height for responsive design */
+    overflow: hidden; /* Use hidden to ensure no scrolling, and the image is fully contained */
     border-radius: 8px;
 }
 
 .image-container img {
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain; /* Ensures the image covers the entire container without distortion */
+    border-radius: inherit; /* Apply the same border-radius to the image */
+    display: block; /* Removes any unwanted spaces below the image */
 }
 
-.Product-content {
-    padding: 15px 15px 15px 15px;
+.pd-up {
+    padding: 15px 15px 0px 15px;
+}
+.pd-under {
+    padding: 0px 15px 15px 15px;
 }
 
 .discount-label {
     position: absolute;
     top: 11px;
     left: 11px;
+
     background-color: #41CCCC;
-    color: #fff;
+    color: #111111;
     padding: 4px 8px;
     border-radius: 4px;
+    font-family: Open Sans;
     font-size: 14px;
     font-weight: bold;
 }
@@ -111,6 +140,9 @@
     font-weight: bold;
     gap: 4px;
 }
+.rating p{
+    color: #5f5f5f;
+}
 
 .add-to-cart {
     background-color: #41CCCC;
@@ -129,13 +161,23 @@
     background-color:#31b3b3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1800px) {
+    .product-card {
+        flex: 1 1 calc(25% - 20px); /* 2 cards per row */
+    }
+}
+@media (max-width: 1420px) {
+    .product-card {
+        flex: 1 1 calc(30% - 20px); /* 2 cards per row */
+    }
+}
+@media (max-width: 850px) {
     .product-card {
         flex: 1 1 calc(50% - 20px); /* 2 cards per row */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .product-card {
         flex: 1 1 100%; /* 1 card per row */
     }

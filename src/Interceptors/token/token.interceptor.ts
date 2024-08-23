@@ -13,7 +13,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
   constructor(private authService: AuthService) {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<unknown>> {
       // Skip the auth endpoint
       if (request.url.includes('Account')) {
         return next.handle(request);
@@ -22,9 +22,15 @@ export class TokenInterceptor implements HttpInterceptor {
         // Get the token from the auth service
         const token = this.authService.getToken();
 
+        const modifiedBody = {
+          ...request.body,
+             userId: this.authService.getUserId()
+        };
+    
         // Clone the request and add the Authorization header
         const cloned = request.clone({
-          headers: request.headers.set('Authorization', `Bearer ${token}`)
+          headers: request.headers.set('Authorization', `Bearer ${token}`),
+          body: modifiedBody
         });
         
         console.log(cloned);
